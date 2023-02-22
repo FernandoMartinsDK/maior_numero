@@ -1,0 +1,41 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        
+        int maior = 0;
+
+        for(int y = 1; y < 11; y++)
+        {
+            Console.Write("Insira um numero Inteiro:");
+            int num = int.Parse(Console.ReadLine());
+         
+            while (true)
+            {
+                if(num<0){
+                    Console.WriteLine("Informe um numero valido! Informe outro numero que seja inteiro:");
+                    num = int.Parse(Console.ReadLine());
+                }else{
+                    break;
+                }
+            }
+            
+            if(num>maior)
+            {
+                maior = num;
+            }
+            
+            Console.WriteLine(y+ " de 10 numeros informados \n");
+        }
+        
+        Console.WriteLine("\n O numero maior entre eles e:" + maior);
+
+        Console.ReadKey();
+        
+    }
+}
